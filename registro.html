@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registro | Mobius FC</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="navbar">
+		<a class="nav-brand" href="index.html" aria-label="Mobius FC">
+			<img src="assets/images/Mobius FC escudo.png" alt="Escudo de Mobius FC">
+		</a>
+		<ul class="nav-links">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="index.html#jugadores">Plantel</a></li>
+			<li><a href="index.html#historia">Historia</a></li>
+			<li><a href="registro.html">Registro</a></li>
+		</ul>
+	</nav>
+
+	<main class="register-page">
+		<section class="register-hero">
+			<p class="section-kicker">Registro oficial</p>
+			<h1>Registrarse como socio de Mobius FC</h1>
+			<p class="section-summary">Completa tu primer paso con tus datos personales para unirte al club más esmeralda de Station Square.</p>
+		</section>
+
+		<section class="form-card">
+			<h2>Paso 11: Datos personales</h2>
+			<form class="register-form" action="#" method="post">
+				<div class="form-grid">
+					<div class="form-group full-width">
+						<label for="nombre-completo">Nombre completo</label>
+						<input id="nombre-completo" name="nombre-completo" type="text" placeholder="Ej: Juan Pérez" required>
+					</div>
+
+					<div class="form-group">
+						<label for="fecha-nacimiento">Fecha de nacimiento</label>
+						<input id="fecha-nacimiento" name="fecha-nacimiento" type="date" required>
+					</div>
+
+					<div class="form-group">
+						<label for="rut">RUT</label>
+						<input id="rut" name="rut" type="text" placeholder="Ej: 12.345.678-9" required>
+					</div>
+
+					<div class="form-group">
+						<label for="genero">Género</label>
+						<select id="genero" name="genero" required>
+							<option value="">Selecciona una opción</option>
+							<option value="masculino">Masculino</option>
+							<option value="femenino">Femenino</option>
+							<option value="no-binario">No binario</option>
+							<option value="prefiero-no-decir">Prefiero no decirlo</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="nacionalidad">Nacionalidad</label>
+						<input id="nacionalidad" name="nacionalidad" type="text" placeholder="Ej: Chilena" required>
+					</div>
+				</div>
+
+				<h2>Paso 12: Datos de acceso</h2>
+				<div class="form-grid">
+					<div class="form-group full-width">
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" placeholder="Ej: usuario@correo.com" required>
+					</div>
+
+					<div class="form-group full-width">
+						<label for="confirmar-email">Confirmar email</label>
+						<input id="confirmar-email" name="confirmar-email" type="email" placeholder="Repite tu email" required>
+					</div>
+
+					<div class="form-group">
+						<label for="contrasena">Contraseña</label>
+						<input id="contrasena" name="contrasena" type="password" placeholder="Crea una contraseña" required>
+					</div>
+
+					<div class="form-group">
+						<label for="confirmar-contrasena">Confirmar contraseña</label>
+						<input id="confirmar-contrasena" name="confirmar-contrasena" type="password" placeholder="Repite tu contraseña" required>
+					</div>
+
+					<div class="form-group full-width">
+						<label for="telefono">Teléfono</label>
+						<input id="telefono" name="telefono" type="tel" placeholder="Ej: +56 9 1234 5678" required>
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button class="btn-cta" type="submit">Continuar registro</button>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="footer-brand">Mobius FC</div>
+		<p class="footer-founded">Fundado el 28/4/1989</p>
+		<p class="footer-email">Email: contacto@mobiusfc.fake</p>
+		<div class="footer-socials" aria-label="Redes sociales falsas">
+			<a href="#" aria-label="Facebook falso">Facebook</a>
+			<a href="#" aria-label="Instagram falso">Instagram</a>
+			<a href="#" aria-label="X falso">X</a>
+		</div>
+	</footer>
+</body>
+</html>
