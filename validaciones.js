@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		confirmarContrasena: document.getElementById('confirmar-contrasena'),
 		terminos: document.querySelector('input[name="acepto-hincha"]'),
 	};
+	const registerCard = document.querySelector('.form-card');
 
 	const errors = {
 		nombre: document.getElementById('error-nombre'),
@@ -51,6 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		if (fields.terminos) {
 			fields.terminos.setAttribute('aria-invalid', message ? 'true' : 'false');
+		}
+	}
+
+	function showSuccessMessage() {
+		const fullName = fields.nombre.value.trim();
+		const firstName = fullName.split(/\s+/)[0] || 'socio';
+
+		form.classList.add('is-hidden');
+
+		let successMessage = registerCard.querySelector('.success-message');
+		if (!successMessage) {
+			successMessage = document.createElement('div');
+			successMessage.className = 'success-message';
+			successMessage.innerHTML = `
+				<h3>¡Bienvenido al Mobius FC, ${firstName}!</h3>
+				<p>Tu registro fue enviado correctamente. Ya formas parte de la familia esmeralda de Station Square.</p>
+				<a class="btn-cta" href="index.html">Volver al inicio</a>
+			`;
+			registerCard.appendChild(successMessage);
 		}
 	}
 
@@ -213,14 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		event.preventDefault();
 
 		if (validateForm()) {
-			alert('Formulario enviado correctamente.');
-			form.reset();
 			Object.values(errors).forEach((errorElement) => {
 				if (errorElement) {
 					errorElement.textContent = '';
 				}
 			});
 			form.querySelectorAll('.invalid').forEach((element) => element.classList.remove('invalid'));
+			showSuccessMessage();
 			return;
 		}
 
