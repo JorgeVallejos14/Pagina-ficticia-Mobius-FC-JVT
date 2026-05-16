@@ -1,0 +1,22 @@
+/* Estilos base */
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#222}
+
+/* Barra de navegación */
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(90deg,#0b3d91,#1b75bb);color:#fff}
+.nav-brand{font-weight:700;font-size:1.25rem}
+.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:18px}
+.nav-links a{color:#fff;text-decoration:none;padding:6px 8px;border-radius:4px}
+.nav-links a:hover{background:rgba(255,255,255,0.08)}
+
+/* Layout de contenido */
+main{padding:20px}
+
+/* Responsive: en pantallas pequeñas apilar links debajo del logo */
+@media (max-width:600px){
+	.navbar{flex-direction:column;align-items:flex-start;gap:10px}
+	.nav-links{flex-direction:column;width:100%}
+	.nav-links li{width:100%}
+	.nav-links a{display:block;width:100%;padding:10px 12px}
+}
+
