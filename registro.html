@@ -28,16 +28,18 @@
 
 		<section class="form-card">
 			<h2>Paso 11: Datos personales</h2>
-			<form class="register-form" action="#" method="post">
+			<form id="register-form" class="register-form" action="#" method="post" novalidate>
 				<div class="form-grid">
 					<div class="form-group full-width">
 						<label for="nombre-completo">Nombre completo</label>
 						<input id="nombre-completo" name="nombre-completo" type="text" placeholder="Ej: Juan Pérez" required>
+						<small class="field-error" id="error-nombre"></small>
 					</div>
 
 					<div class="form-group">
 						<label for="fecha-nacimiento">Fecha de nacimiento</label>
 						<input id="fecha-nacimiento" name="fecha-nacimiento" type="date" required>
+						<small class="field-error" id="error-edad"></small>
 					</div>
 
 					<div class="form-group">
@@ -67,21 +69,25 @@
 					<div class="form-group full-width">
 						<label for="email">Email</label>
 						<input id="email" name="email" type="email" placeholder="Ej: usuario@correo.com" required>
+						<small class="field-error" id="error-email"></small>
 					</div>
 
 					<div class="form-group full-width">
 						<label for="confirmar-email">Confirmar email</label>
 						<input id="confirmar-email" name="confirmar-email" type="email" placeholder="Repite tu email" required>
+						<small class="field-error" id="error-confirmar-email"></small>
 					</div>
 
 					<div class="form-group">
 						<label for="contrasena">Contraseña</label>
 						<input id="contrasena" name="contrasena" type="password" placeholder="Crea una contraseña" required>
+						<small class="field-error" id="error-contrasena"></small>
 					</div>
 
 					<div class="form-group">
 						<label for="confirmar-contrasena">Confirmar contraseña</label>
 						<input id="confirmar-contrasena" name="confirmar-contrasena" type="password" placeholder="Repite tu contraseña" required>
+						<small class="field-error" id="error-confirmar-contrasena"></small>
 					</div>
 
 					<div class="form-group full-width">
@@ -111,12 +117,13 @@
 				</div>
 
 				<h2>Paso 14: Confirmación</h2>
-				<div class="form-group full-width">
+				<div class="form-group full-width" id="terms-group">
 					<label class="choice-item"><input type="checkbox" name="acepto-hincha" required> Acepto ser hincha del más grande de Station Square.</label>
+					<small class="field-error" id="error-terminos"></small>
 				</div>
 
 				<div class="form-actions">
-					<button class="btn-cta" type="submit">Continuar registro</button>
+					<button class="btn-cta" type="submit">Registrarme</button>
 				</div>
 			</form>
 		</section>
@@ -132,5 +139,7 @@
 			<a href="#" aria-label="X falso">X</a>
 		</div>
 	</footer>
+
+	<script src="validaciones.js"></script>
 </body>
 </html>
